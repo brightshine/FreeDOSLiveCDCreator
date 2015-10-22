@@ -7,7 +7,7 @@ readonly ISO_FS_OPT='-input-charset utf8 -no-emul-boot -boot-load-size 4 -boot-i
 
 [ ! -f ] && wget -N http://www.fdos.info/bootdisks/ISO/${BUILDER}
 
-[ -d ] && rm -rf ${TOPDIR}
+[ -d ${TOPDIR} ] && rm -rf ${TOPDIR}
 unzip ${BUILDER}
 
 # Remove unnecessary prompt & timeout
