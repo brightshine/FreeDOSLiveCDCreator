@@ -5,7 +5,7 @@ readonly AUTORUN='FDOEMCD/CDROOT/isolinux/AUTORUN.BAT'
 readonly TOPDIR='FDOEMCD'
 readonly ISO_FS_OPT='-input-charset utf8 -no-emul-boot -boot-load-size 4 -boot-info-table -N -J -r -c boot.catalog -hide boot.catalog -hide-joliet boot.catalog'
 
-[ ! -f ] && wget -N http://www.fdos.info/bootdisks/ISO/${BUILDER}
+[ ! -f ${BUILDER} ] && wget -N http://www.fdos.info/bootdisks/ISO/${BUILDER}
 
 [ -d ${TOPDIR} ] && rm -rf ${TOPDIR}
 unzip ${BUILDER}
